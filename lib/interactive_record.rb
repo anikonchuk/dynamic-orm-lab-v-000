@@ -69,11 +69,11 @@ class InteractiveRecord
     sql = <<-SQL
       SELECT *
       FROM #{self.table_name}
-      WHERE ? = ?
+      WHERE #{key} = #{value}
       SQL
-
+ 
       binding.pry
-    DB[:conn].execute(sql, key, value)
+    DB[:conn].execute(sql)
   end
 
 end
