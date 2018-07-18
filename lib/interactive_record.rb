@@ -76,7 +76,6 @@ class InteractiveRecord
       FROM #{self.table_name}
       WHERE #{key} = #{new_value}
       SQL
-    binding.pry
     DB[:conn].execute(sql)
   end
 
