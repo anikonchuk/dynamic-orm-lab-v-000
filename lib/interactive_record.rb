@@ -73,7 +73,7 @@ class InteractiveRecord
       SQL
 
       binding.pry
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, key, value)
   end
 
 end
