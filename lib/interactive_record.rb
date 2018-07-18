@@ -69,7 +69,7 @@ class InteractiveRecord
     if value.class == Fixnum
       new_value = value
     else
-      new_value = "#{value}"
+      new_value = "'#{value}'"
     end
     sql = <<-SQL
       SELECT *
